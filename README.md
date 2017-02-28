@@ -1,5 +1,6 @@
 # React Boilerplates
-A series of boilerplates for <a href="https://facebook.github.io/react/">React</a> applications. 
+A series of boilerplates for <a href="https://facebook.github.io/react/">React</a> applications.
+Nothing fancy, but a good starting point for any React project.
 
 ## Requirements
 It is assumed that you have <a href="http://nodejs.org/">Node</a> and <a href="https://www.npmjs.com/">NPM</a> installed. Node Package Manager (NPM) should come with your Node installation.
