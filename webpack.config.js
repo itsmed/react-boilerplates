@@ -12,7 +12,7 @@ module.exports = {
     publicPath: '/build/'
   },
   context: path.resolve(__dirname),
-  devtool: "cheap-eval-source-map",
+  devtool: "cheap-source-map",
   module: {
     rules: [
       {
@@ -25,7 +25,6 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src')
         ],
-        // exclude: /node_modules/,
         use: [
           'react-hot-loader',
           'babel-loader'

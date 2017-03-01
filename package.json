@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --display-error-details --colors --progress --module-bind 'js=babel",
+    "build": "webpack --display-error-details --colors --progress --module-bind 'js=babel'",
     "watch": "webpack --display-error-details --colors --progress --module-bind 'js=babel' --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
