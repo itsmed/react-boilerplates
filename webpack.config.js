@@ -4,7 +4,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
-    // 'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   output: {
@@ -26,7 +25,7 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src')
         ],
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         use: [
           'react-hot-loader',
           'babel-loader'
@@ -60,9 +59,7 @@ module.exports = {
     filename: 'bundle.js',
     compress: true,
     port: 8080,
-    // lazy: true,
     hot: true,
-    hotOnly: true,
     watchContentBase: true,
     stats: {
       colors: true,

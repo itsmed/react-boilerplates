@@ -1,14 +1,12 @@
 {
   "name": "react-boilerplates",
   "version": "1.0.0",
-  "description": "A series of boilerplates forReact applications.",
+  "description": "A series of boilerplates for React based applications.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "serve": "webpack-dev-server",
-    "start:watch": "npm run build:watch && http-server ./public",
+    "start": "webpack-dev-server",
     "build": "webpack --display-error-details --colors --progress --module-bind 'js=babel",
-    "build:watch": "webpack --display-error-details --colors --progress --module-bind 'js=babel' --watch",
+    "watch": "webpack --display-error-details --colors --progress --module-bind 'js=babel' --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +21,6 @@
   },
   "homepage": "https://github.com/itsmed/react-boilerplates#readme",
   "dependencies": {
-    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
