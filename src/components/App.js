@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import dbData from '../../fake_db';
 
+import Header from './header/Header';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,16 +13,8 @@ class App extends Component {
   }
 
   render() {
-    console.log('state', this.state);
     return <div>
-      <h1>Hello from the app!</h1>
-      <p>This was more difficult than webpack 1!</p>
-      <p>But it works now!</p>
-      <pre>
-        <code>
-          { 12 * 12}
-        </code>
-      </pre>
+      <Header />
     </div>
   }
 }
