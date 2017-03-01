@@ -1,11 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import ClientApp from './components/App';
+
 const App = () => (
   <div>
-    Hello World!
+    <App />
   </div>
 );
 
-render(<App />,
+render(<ClientApp />,
   document.getElementById('app'));
