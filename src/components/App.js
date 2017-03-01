@@ -6,7 +6,7 @@ class App extends Component {
       <h1>Hello from the app!</h1>
       <p>This was more difficult than webpack 1!</p>
       <p>But it works now!</p>
-      <h3>Still...!</h3>
+      <h3>Bitches</h3>
     </div>
   }
 }
