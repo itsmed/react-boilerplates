@@ -11,15 +11,12 @@ Change into the directory and run `npm install` to get the dependencies installe
 
 ## Running the Application
 
-### Front End Only
-Run `npm run build:watch` to start the <a href="https://github.com/webpack/webpack-dev-server">Webpack Dev Server</a>.
+Run `npm start` to start the <a href="https://github.com/webpack/webpack-dev-server">Webpack Dev Server</a>.
 Open your browser and head over to localhost://8080 to see the application served from webpack-dev-server.
 Hot reloading is enabled, so you should be able to make start hacking and see the changes reflected in the browser.
 
-### Back End
-If you cloned a branch that includes a Node/Express server, run `npm run build:watch` so that webpack-dev-server watches your front-end files for changes. 
-Then in another Terminal window, run `npm run start:watch`, and nodemon will watch your server files so you can make changes without having to stop and restart your server.
-Run `npm start` to just run the Node/Express Server.
+`npm run build` will result in  bundle.js and bundle.js.map being created in the public/build/ directory.
+`npm run watch` will run webpack in watch mode, and bundle.js will be served from memory. 
 
 ### All
 When you are ready, run `npm run build` to bundle your project. The bundled file (bundle.js) will be created in the public/build/ folder.
