@@ -12,9 +12,9 @@ class Header extends Component {
   render() {
     return <header>
       <MainBrand />
+      <SearchBar />
       <HeaderButton text="Sign Up" />
       <HeaderButton text="Sign In" />
-      <SearchBar />
     </header>;
   }
 };
