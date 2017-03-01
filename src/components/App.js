@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import dbData from '../../fake_db';
 
 import Header from './header/Header';
+import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class App extends Component {
   render() {
     return <div>
       <Header />
-    </div>
+      <CategoriesContainer />
+    </div>;
   }
 }
 
