@@ -14,9 +14,11 @@ class App extends Component {
   }
 
   render() {
+    const { data } = this.state;
+
     return <div>
       <Header />
-      <CategoriesContainer />
+      <CategoriesContainer categories={ data.categories } />
     </div>;
   }
 }

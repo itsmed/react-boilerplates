@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import PostCategoryPreview from './PostCategoryPreview';
+
 class CategoriesContainer extends Component {
 
   constructor(props) {
@@ -7,8 +9,17 @@ class CategoriesContainer extends Component {
   }
 
   render() {
+    const { categories } = this.props;
+    console.log(categories);
     return <div>
       <h3>Categories</h3>
+      {
+        Object.keys(categories).map((v, i) => {
+          return <div key={i}>
+            {v}
+          </div>;
+        })
+      }
     </div>;
   }
 }
