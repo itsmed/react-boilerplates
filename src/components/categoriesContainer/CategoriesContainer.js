@@ -10,7 +10,6 @@ class CategoriesContainer extends Component {
 
   render() {
     const { categories } = this.props;
-    console.log(categories);
     return <div>
       <h3>Categories</h3>
       {

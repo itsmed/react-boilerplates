@@ -26,7 +26,6 @@ module.exports = {
           path.resolve(__dirname, 'src')
         ],
         use: [
-          'react-hot-loader',
           'babel-loader'
         ],
       },
@@ -59,7 +58,6 @@ module.exports = {
     compress: true,
     port: 8080,
     hot: true,
-    hotOnly: true,
     watchContentBase: true,
     stats: {
       colors: true,
