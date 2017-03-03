@@ -7,11 +7,14 @@ import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
 import PostFullView from './blog/PostFullView';
 import BlogManagementPanel from './dashboard/BlogManagementPanel';
 
+import '../styles/index.scss';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: dbData
+      data: dbData,
+      auth: false,
     };
   }
 
@@ -20,10 +23,10 @@ class App extends Component {
 
     return <div>
       <Header />
-      <div style={{display: 'flex'}}>
+      <div className='flex-container'>
         <CategoriesContainer categories={ data.categories } />
         <PostFullView post={data.categories.Intro.posts[0]} />
-        <BlogManagementPanel />
+        { this.state.auth ? <BlogManagementPanel /> : '' }
       </div>
     </div>;
   }

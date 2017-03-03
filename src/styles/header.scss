@@ -1,0 +1,19 @@
+@import './index.scss';
+
+header {
+  border-style: solid;
+  padding: 1em;
+}
+
+.search-bar {
+  width: 40%;
+  border-radius: 4%;
+  font-size: 2em;
+}
+
+.header-button {
+  width: 80px;
+  height: 40px;
+  margin: 1em;
+  font-size: 1em;
+}

@@ -10,7 +10,7 @@ class PostFullView extends Component {
   render() {
     const { post } = this.props;
 
-    return <div>
+    return <div style={{alignSelf: 'center', flex: 2}}>
       <div>
         <UserAvatar />
         <h4>{ post.author }</h4>
