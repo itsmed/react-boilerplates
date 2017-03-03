@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../../styles/header.scss';
+
 class SearchBar extends Component {
 
   constructor(props) {
@@ -11,7 +13,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    return <input type="text" placeholder="Search" onChange={ this.handleChange.bind(this) } />
+    return <input type="text" placeholder="Search" className="search-bar" onChange={ this.handleChange.bind(this) } />
   }
 };
 

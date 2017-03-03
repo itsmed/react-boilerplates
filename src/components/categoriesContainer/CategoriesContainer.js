@@ -15,7 +15,7 @@ class CategoriesContainer extends Component {
 
   render() {
     const { categories } = this.props;
-    return <div>
+    return <div style={{flex: 1, alignSelf: 'flex-start'}}>
       <h3>Categories</h3>
       {
         Object.keys(categories).map((v, i) => {
