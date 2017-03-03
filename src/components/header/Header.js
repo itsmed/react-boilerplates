@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import HeaderButton from './HeaderButton';
 import SearchBar from './SearchBar';
-import MainBrand from '../MainBrand';
+import MainBrand from '../branding/MainBrand';
 
 class Header extends Component {
   constructor(props) {
@@ -10,11 +10,13 @@ class Header extends Component {
   }
 
   render() {
+    let signInButtonText = this.props.auth ? 'Sign Out' : 'Sign In';
+
     return <header>
       <MainBrand />
       <SearchBar />
       <HeaderButton text="Sign Up" />
-      <HeaderButton text="Sign In" />
+      <HeaderButton text={signInButtonText} />
     </header>;
   }
 };
