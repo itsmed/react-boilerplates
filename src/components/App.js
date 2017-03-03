@@ -5,6 +5,7 @@ import dbData from '../../fake_db';
 import Header from './header/Header';
 import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
 import PostFullView from './blog/PostFullView';
+import BlogManagementPanel from './dashboard/BlogManagementPanel';
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +20,11 @@ class App extends Component {
 
     return <div>
       <Header />
-      <CategoriesContainer categories={ data.categories } />
-      <PostFullView post={data.categories.Intro.posts[0]} />
+      <div style={{display: 'flex'}}>
+        <CategoriesContainer categories={ data.categories } />
+        <PostFullView post={data.categories.Intro.posts[0]} />
+        <BlogManagementPanel />
+      </div>
     </div>;
   }
 }
