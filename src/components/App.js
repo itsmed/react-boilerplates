@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       data: dbData,
-      auth: false,
+      auth: true,
     };
   }
 

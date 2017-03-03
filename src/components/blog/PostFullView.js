@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import UserAvatar from '../user/UserAvatar';
 
+import '../../styles/blog.scss';
+
 class PostFullView extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,7 @@ class PostFullView extends Component {
   render() {
     const { post } = this.props;
 
-    return <div style={{alignSelf: 'center', flex: 2}}>
+    return <div className="blog-full-view">
       <div>
         <UserAvatar />
         <h4>{ post.author }</h4>

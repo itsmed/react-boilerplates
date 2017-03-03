@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../../styles/dashboard.scss';
+
 class ManagementButton extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,7 @@ class ManagementButton extends Component {
   }
 
   render() {
-    return <button onClick={ this.handleClick.bind(this) }>
+    return <button className="dashboard-button" onClick={ this.handleClick.bind(this) }>
       { this.props.text }
     </button>;
   }
