@@ -4,6 +4,8 @@ import HeaderButton from './HeaderButton';
 import SearchBar from './SearchBar';
 import MainBrand from '../branding/MainBrand';
 
+import '../../styles/index.scss';
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -12,11 +14,13 @@ class Header extends Component {
   render() {
     let signInButtonText = this.props.auth ? 'Sign Out' : 'Sign In';
 
-    return <header>
+    return <header className='flex-container'>
       <MainBrand />
       <SearchBar />
-      <HeaderButton text="Sign Up" />
-      <HeaderButton text={signInButtonText} />
+      <div className='flex-container'>
+        <HeaderButton text="Sign Up" />
+        <HeaderButton text={signInButtonText} />
+      </div>
     </header>;
   }
 };
