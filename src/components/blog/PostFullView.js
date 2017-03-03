@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import UserAvatar from '../user/UserAvatar';
-import UserByLine from '../user/UserByLine';
 
 class PostFullView extends Component {
   constructor(props) {
@@ -14,7 +13,9 @@ class PostFullView extends Component {
     return <div>
       <div>
         <UserAvatar />
-        <UserByLine />
+        <h4>{ post.author }</h4>
+      </div>
+      <div>
         <h2>{ post.title }</h2>
         <p>{ post.text }</p>
       </div>

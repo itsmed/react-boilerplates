@@ -4,6 +4,7 @@ import dbData from '../../fake_db';
 
 import Header from './header/Header';
 import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
+import PostFullView from './blog/PostFullView';
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
     return <div>
       <Header />
       <CategoriesContainer categories={ data.categories } />
+      <PostFullView post={data.categories.Intro.posts[0]} />
     </div>;
   }
 }
