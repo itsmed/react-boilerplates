@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 
 import PostCategoryPreview from './PostCategoryPreview';
 
+var nums = [1, 2,3, 4, 5];
+
 class CategoriesContainer extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  handleClick(e) {
+    const name = e.target.dataset.categoryName;
+    console.log('name', name);
   }
 
   render() {
@@ -14,19 +21,18 @@ class CategoriesContainer extends Component {
       <h3>Categories</h3>
       {
         Object.keys(categories).map((v, i) => {
+          var p = v;
           return <div key={i}>
-            {v}
+            <h3 data-category-name={v} onClick={ this.handleClick.bind(this) }>{v}</h3>
+            <ul>
+              {/*nums.map(n => <li>{n}</li>)*/}
+              {categories[p].posts.map(post => <li>{<PostCategoryPreview post={post} />}</li>)}
+            </ul>  
           </div>;
         })
       }
     </div>;
   }
 }
-
-// const { s}
-
-//CategoriesContainer.propTypes = {
-//   name: React.PropTypes.string,
-// };
 
 export default CategoriesContainer;
