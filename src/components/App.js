@@ -19,29 +19,8 @@ class App extends Component {
     };
   }
 
-  showModal() {
-    this.refs.auth.refs['auth-container'].classList.remove('hidden');
-  }
-
-  handleSignUp(e) {
-    e.preventDefault();
-    this.showModal();
-    console.log(this.refs);
-  }
-
-  handleAuth() {
-    if (this.state.auth) {
-      return this.showModal();
-    } else {
-      this.setState({
-        auth: !this.state.auth
-      });
-    }
-  }
-
   render() {
     const { data } = this.state;
-
     return <div>
       <Header
         auth={ this.state.auth }
@@ -55,6 +34,30 @@ class App extends Component {
         { this.state.auth ? <BlogManagementPanel /> : '' }
       </div>
     </div>;
+  }
+
+  showModal() {
+    this.refs.auth.refs['auth-container'].classList.remove('hidden');
+  }
+
+  handleSignUp(e) {
+    e.preventDefault();
+    this.showModal();
+    console.log(this.refs);
+  }
+
+  handleAuth() {
+    if ( !(this.state.auth) ) {
+      return this.showModal();
+    } else {
+      return this.handleSignIn();
+    }
+  }
+
+  handleSignIn() {
+    this.setState({
+      auth: !this.state.auth
+    });
   }
 }
 
