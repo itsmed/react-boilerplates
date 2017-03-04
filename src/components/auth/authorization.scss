@@ -1,0 +1,30 @@
+@import '../index.scss';
+
+.auth-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-style: solid;
+  justify-content: space-between;
+  background-color: #a9a9a9;
+  width: 300px;
+  height: 300px;
+  left: 40%;
+}
+
+.modal-ele {
+  height: 80px;
+  margin: 10px;
+  border-radius: 3%;
+  font-size: 1em;
+  z-index: 500;
+}
+
+#modal-background {
+  min-width: 2000px;
+  min-height: 2000px;
+  background-color: #a9a9a9;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 0;
+}

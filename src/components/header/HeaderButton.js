@@ -12,9 +12,8 @@ class HeaderButton extends Component {
   }
 
   render() {
-    console.log(this.props);
     return <div>
-      <button className="header-button" onClick={ this.handleClick.bind(this) }>{ this.props.text }</button>
+      <button className="header-button" onClick={ (e) => this.props.buttonAction(e) }>{ this.props.text }</button>
     </div>;
   }
 };

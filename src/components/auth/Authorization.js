@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './signup.scss';
+import './authorization.scss';
 
-class SignUp extends Component {
+class Authorization extends Component {
   constructor(props) {
     super(props);
   }
@@ -13,14 +13,15 @@ class SignUp extends Component {
   }
 
   render() {
-    return <div>
+    return <div className="hidden" ref="auth-container">
+      <div id="modal-background"></div>
       <form onSubmit={ this.handleSubmit.bind(this) } className="auth-modal">
         <input type="text" placeholder="User Name" ref="username" className="modal-ele modal-input" />
         <input type="password" placeholder="Password" ref="userpw" className="modal-ele modal-input" />
-        <button className="modal-ele">Sign Up</button>
+        <button className="modal-ele">{ this.props.message }</button>
       </form>
     </div>;
   }
 }
 
-export default SignUp;
+export default Authorization;

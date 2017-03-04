@@ -6,7 +6,7 @@ import Header from './header/Header';
 import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
 import PostFullView from './blog/PostFullView';
 import BlogManagementPanel from './dashboard/BlogManagementPanel';
-import SignUp from './auth/SignUp';
+import Authorization from './auth/Authorization';
 
 import './index.scss';
 
@@ -19,12 +19,25 @@ class App extends Component {
     };
   }
 
+  handleSignUp(e) {
+    e.preventDefault();
+    console.log(e.target.textContent);
+  }
+
+  handleAuth() {
+    console.log('auth');
+  }
+
   render() {
     const { data } = this.state;
 
     return <div>
-      <Header />
-      <SignUp />
+      <Header
+        auth={ this.state.auth }
+        handleSignUp={ this.handleSignUp.bind(this) }
+        handleAuth={ this.handleAuth.bind(this) }
+      />
+      <Authorization message="Sign Up" />
       <div className='flex-container'>
         <CategoriesContainer categories={ data.categories } />
         <PostFullView post={data.categories.Intro.posts[0]} />
