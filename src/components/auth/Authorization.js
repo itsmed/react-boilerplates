@@ -9,16 +9,16 @@ class Authorization extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('clicked', this.refs.username.value);
+    this.props.handleSignUp(this.refs.username.value);
   }
 
   render() {
-    return <div className="hidden" ref="auth-container">
+    return <div ref="auth-container">
       <div id="modal-background"></div>
       <form onSubmit={ this.handleSubmit.bind(this) } className="auth-modal">
         <input type="text" placeholder="User Name" ref="username" className="modal-ele modal-input" />
         <input type="password" placeholder="Password" ref="userpw" className="modal-ele modal-input" />
-        <button className="modal-ele" onClick={ this.props.handleSignIn }>{ this.props.message }</button>
+        <button className="modal-ele">{ this.props.message }</button>
       </form>
     </div>;
   }
