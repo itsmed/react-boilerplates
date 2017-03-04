@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/dashboard.scss';
+import './dashboard.scss';
 
 class ManagementButton extends Component {
   constructor(props) {

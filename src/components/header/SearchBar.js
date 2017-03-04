@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/header.scss';
+import './header.scss';
 
 class SearchBar extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import PostCategoryPreview from './PostCategoryPreview';
 
-import '../../styles/categories.scss';
+import './categories.scss';
 
 class CategoriesContainer extends Component {
 

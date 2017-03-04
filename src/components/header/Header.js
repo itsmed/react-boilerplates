@@ -4,7 +4,7 @@ import HeaderButton from './HeaderButton';
 import SearchBar from './SearchBar';
 import MainBrand from '../branding/MainBrand';
 
-import '../../styles/header.scss';
+import './header.scss';
 
 class Header extends Component {
   constructor(props) {

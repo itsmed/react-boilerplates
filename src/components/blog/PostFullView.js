@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import UserAvatar from '../user/UserAvatar';
 
-import '../../styles/blog.scss';
+import './blog.scss';
 
 class PostFullView extends Component {
   constructor(props) {

@@ -6,8 +6,9 @@ import Header from './header/Header';
 import CategoriesContainer from './CategoriesContainer/CategoriesContainer';
 import PostFullView from './blog/PostFullView';
 import BlogManagementPanel from './dashboard/BlogManagementPanel';
+import SignUp from './auth/SignUp';
 
-import '../styles/index.scss';
+import './index.scss';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
 
     return <div>
       <Header />
+      <SignUp />
       <div className='flex-container'>
         <CategoriesContainer categories={ data.categories } />
         <PostFullView post={data.categories.Intro.posts[0]} />

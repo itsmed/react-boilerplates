@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ManagementButton from './ManagementButton';
 
-import '../../styles/dashboard.scss';
+import './dashboard.scss';
 
 class BlogManagementPanel extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/user_avatar.scss';
+import './user_avatar.scss';
 
 class UserAvatar extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class UserAvatar extends Component {
 
   render() {
     return <div id="avatar-container">
-      { this.props.pic === undefined? 'No Image Available' : <img src={this.props.pic} id="avatar" /> }
+      { this.props.pic === undefined? <p>No Image Available</p> : <img src={this.props.pic} id="avatar" /> }
     </div>;
   }
 }
