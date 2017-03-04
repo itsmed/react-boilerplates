@@ -15,8 +15,8 @@ class SignUp extends Component {
   render() {
     return <div>
       <form onSubmit={ this.handleSubmit.bind(this) } className="auth-modal">
-        <input type="text" placeholder="User Name" ref="username" className="modal-ele" />
-        <input type="password" placeholder="Password" ref="userpw" className="modal-ele" />
+        <input type="text" placeholder="User Name" ref="username" className="modal-ele modal-input" />
+        <input type="password" placeholder="Password" ref="userpw" className="modal-ele modal-input" />
         <button className="modal-ele">Sign Up</button>
       </form>
     </div>;
