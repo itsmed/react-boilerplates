@@ -19,13 +19,24 @@ class App extends Component {
     };
   }
 
+  showModal() {
+    this.refs.auth.refs['auth-container'].classList.remove('hidden');
+  }
+
   handleSignUp(e) {
     e.preventDefault();
-    console.log(e.target.textContent);
+    this.showModal();
+    console.log(this.refs);
   }
 
   handleAuth() {
-    console.log('auth');
+    if (this.state.auth) {
+      return this.showModal();
+    } else {
+      this.setState({
+        auth: !this.state.auth
+      });
+    }
   }
 
   render() {
@@ -37,7 +48,7 @@ class App extends Component {
         handleSignUp={ this.handleSignUp.bind(this) }
         handleAuth={ this.handleAuth.bind(this) }
       />
-      <Authorization message="Sign Up" />
+      <Authorization message="Sign Up" ref="auth" />
       <div className='flex-container'>
         <CategoriesContainer categories={ data.categories } />
         <PostFullView post={data.categories.Intro.posts[0]} />
