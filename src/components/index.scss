@@ -1,0 +1,15 @@
+@import './vars';
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container {
+  display: $flex;
+  justify-content: $between
+}
+
+.hidden {
+  display: none;
+}

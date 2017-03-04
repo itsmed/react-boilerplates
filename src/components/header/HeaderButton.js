@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/header.scss';
+import './header.scss';
 
 class HeaderButton extends Component {
   constructor(props) {
@@ -12,7 +12,6 @@ class HeaderButton extends Component {
   }
 
   render() {
-    console.log(this.props);
     return <div>
       <button className="header-button" onClick={ this.handleClick.bind(this) }>{ this.props.text }</button>
     </div>;

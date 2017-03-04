@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import PostCategoryPreview from './PostCategoryPreview';
 
+import './categories.scss';
+
 class CategoriesContainer extends Component {
 
   constructor(props) {
@@ -15,7 +17,7 @@ class CategoriesContainer extends Component {
 
   render() {
     const { categories } = this.props;
-    return <div style={{flex: 1, alignSelf: 'flex-start'}}>
+    return <div id="categories-container">
       <h3>Categories</h3>
       {
         Object.keys(categories).map((v, i) => {
