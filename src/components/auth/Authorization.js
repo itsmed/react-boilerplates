@@ -9,7 +9,7 @@ class Authorization extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handleSignUp(this.refs.username.value);
+    this.props.handleSignIn(this.refs.username.value);
   }
 
   render() {

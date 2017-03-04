@@ -19,7 +19,7 @@ class Header extends Component {
       <SearchBar />
       <div className='flex-container'>
         { this.props.auth ? '' : <HeaderButton text="Sign Up" buttonAction={ this.props.handleSignUp } /> }
-        <HeaderButton text={signInButtonText} buttonAction={ this.props.handleSignOut } />
+        <HeaderButton text={signInButtonText} buttonAction={ this.props.handleAuth } />
       </div>
     </header>;
   }
