@@ -20,8 +20,8 @@ const dbData = {
     },
   },
   categories: {
-    001: {
-      name: 'Intro'
+    1: {
+      name: 'Intro',
       posts: [
         {
           title: 'How this app works',
@@ -34,7 +34,7 @@ const dbData = {
         }
       ]
     },
-    0002: {
+    2: {
       name: 'Being a cowboy',
       posts: [
         {

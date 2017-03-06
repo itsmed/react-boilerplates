@@ -42,7 +42,7 @@ class App extends Component {
       <div className='flex-container'>
         <h2>{ this.state.user }</h2>
         <CategoriesContainer categories={ data.categories } />
-        <PostFullView post={data.categories.Intro.posts[0]} />
+        <PostFullView post={data.categories[1].posts[0]} />
         { this.state.auth ? <BlogManagementPanel /> : '' }
       </div>
     </div>;
