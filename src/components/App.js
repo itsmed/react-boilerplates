@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, IndexRoute } from 'react-router';
 
 import dbData from '../../fake_db';
 
