@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import PostCategoryPreview from './PostCategoryPreview';
 
+import _ from 'lodash';
+
 import './categories.scss';
 
 class CategoriesContainer extends Component {
@@ -17,15 +19,17 @@ class CategoriesContainer extends Component {
 
   render() {
     const { categories } = this.props;
+    console.log(categories);
     return <div id="categories-container">
       <h3>Categories</h3>
       {
-        Object.keys(categories).map((v, i) => {
-          var p = v;
+        _.map(categories, (category, i) => {
+          const categoryName = category.name;
+          console.log('category', category);
           return <div key={i}>
-            <h3 data-category-name={v} onClick={ this.handleClick.bind(this) }>{v}</h3>
-            <ul style={{display: 'none'}} ref={v}>
-              {categories[p].posts.map(post => <li>{<PostCategoryPreview post={post} />}</li>)}
+            <h3 data-category-name={category.name} onClick={ this.handleClick.bind(this) }>{category.name}</h3>
+            <ul style={{display: 'none'}} ref={categoryName}>
+              {category.posts.map(post => <li>{<PostCategoryPreview post={post} />}</li>)}
             </ul>  
           </div>;
         })
