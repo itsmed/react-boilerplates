@@ -60,8 +60,9 @@ class App extends Component {
   }
 
   handleAuth() {
-    return this.setState({
-      auth: !this.state.auth
+    return this.state.auth === false ? this.toggleModal() : this.setState({
+      auth: !this.state.auth,
+      user: '',
     });
   } 
 
