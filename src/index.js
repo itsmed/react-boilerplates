@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
+import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 
 import ClientApp from './components/App';
 
-render(<Router history={browserHistory} routes={routes}>
-  <ClientApp />
+render(<Router history={browserHistory}>
+  <Route path="/" component={ClientApp} />
 </Router>, document.getElementById('app'));
