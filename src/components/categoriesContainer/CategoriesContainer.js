@@ -19,7 +19,6 @@ class CategoriesContainer extends Component {
 
   render() {
     const { categories } = this.props;
-    console.log(categories);
     return <div id="categories-container">
       <h3>Categories</h3>
       {
@@ -27,9 +26,9 @@ class CategoriesContainer extends Component {
           const categoryName = category.name;
           console.log('category', category);
           return <div key={i}>
-            <h3 data-category-name={category.name} onClick={ this.handleClick.bind(this) }>{category.name}</h3>
+            <h3 data-category-name={categoryName} onClick={ this.handleClick.bind(this) }>{categoryName}</h3>
             <ul style={{display: 'none'}} ref={categoryName}>
-              {category.posts.map(post => <li>{<PostCategoryPreview post={post} />}</li>)}
+              {category.posts.map(post => <li key={post.title}>{<PostCategoryPreview post={post} />}</li>)}
             </ul>  
           </div>;
         })
